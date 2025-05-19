@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ModernShop</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style3.css" />
+    <link rel="stylesheet" href="style4.css" />
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <i class="fas fa-store"></i> ModernShop
+            </div>
+            <nav>
+                <a href="#">Products</a>
+                <i class="fas fa-shopping-cart cart-icon"></i>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Modern Essentials for Your Space</h1>
+            <p>Discover our carefully curated collection of contemporary furniture and accessories</p>
+            <button class="cta">Explore Collection <i class="fas fa-arrow-right"></i></button>
+        </section>
+
+        <section class="features">
+            <div class="card">
+                <i class="fas fa-lightbulb icon"></i>
+                <h3>Lighting</h3>
+                <p>Illuminate your space with modern lighting solutions</p>
+                <img src="imag1.webp" alt="Lighting">
+            </div>
+            <div class="card">
+                <i class="fas fa-couch icon"></i>
+                <h3>Furniture</h3>
+                <p>Comfortable and stylish furniture for every room</p>
+                <img src="imag2.webp" alt="Furniture">
+            </div>
+            <div class="card">
+                <i class="fas fa-desktop icon"></i>
+                <h3>Electronics</h3>
+                <p>Premium electronics for modern living</p>
+                <img src="imag3.webp" alt="Electronics">
+            </div>
+        </section>
+    </main>
+    <section class="why-choose">
+        <div class="why-container">
+            <h2>Why Choose ModernShop?</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <h3>Curated Selection</h3>
+                    <p>Hand-picked products that meet our quality standards</p>
+                </div>
+                <div class="why-item">
+                    <h3>Free Shipping</h3>
+                    <p>Complimentary shipping on all orders over $100</p>
+                </div>
+                <div class="why-item">
+                    <h3>Expert Support</h3>
+                    <p>24/7 customer service to assist with your needs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="popup" id="launchPopup">
+        <div class="launch-img">
+            <img src="imagenike.png" alt="New Launch Logo" />
+        </div>
+        <div class="text-content">
+            <div class="headline">Introducing Nike Air Jordan™</div>
+            <div class="tagline">Unveiling our boldest vision yet — performance meets power in one unforgettable launch.
+            </div>
+        </div>
+        <button class="cta-button" onclick="window.location.href='https://www.nike.com'">Experience Now</button>
+        <button class=" close-btn" onclick="closePopup()">✖</button>
+    </div>
+
+
+    <div class="bottom-toolbar" id="popupToolbar">
+        <span class="close-btn" onclick="hidePopup()">x</span>
+
+        <div class="popup-heading">Top Picks — Shop iPhone</div>
+        <p class="promo-subheading">Limited Time Offer — Grab your favorite iPhone at an exclusive price!</p>
+
+        <div class="iphone-container">
+            <div class="iphone-item">
+                <img src="image1.webp" alt="iPhone 13" />
+                <div class="iphone-info">
+                    <h3>iPhone 13 <span class="discount-badge">20% OFF</span></h3>
+                    <div class="price"><del>$749</del> <span class="discounted-price">$599</span></div>
+                    <button onclick="window.location.href='https://www.apple.com/shop/buy-iphone/iphone-13'">Shop
+                        Now</button>
+                </div>
+            </div>
+
+            <div class="iphone-item">
+                <img src="image2.jpg" alt="iPhone 14" />
+                <div class="iphone-info">
+                    <h3>iPhone 14 <span class="discount-badge">15% OFF</span></h3>
+                    <div class="price"><del>$829</del> <span class="discounted-price">$699</span></div>
+                    <button onclick="window.location.href='https://www.apple.com/shop/buy-iphone/iphone-14'">Shop
+                        Now</button>
+                </div>
+            </div>
+
+            <div class="iphone-item">
+                <img src="image3.jpg" alt="iPhone 15" />
+                <div class="iphone-info">
+                    <h3>iPhone 15 <span class="discount-badge">10% OFF</span></h3>
+                    <div class="price"><del>$899</del> <span class="discounted-price">$809</span></div>
+                    <button onclick="window.location.href='https://www.apple.com/shop/buy-iphone/iphone-15'">Shop
+                        Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="upsell-footer-toolbar" id="upsellPopup">
+        <img src="mango.jpg" alt="Juicy Mangoes" class="toolbar-img">
+        <div class="toolbar-text">
+            <div class="wait-banner">
+                <div class="main-text"> Hold on!</div>
+                <div class="sub-text">Before you go — juicy goodness awaits!</div>
+            </div>
+            <div class="product-name">Premium Alphonso Mangoes</div>
+            <div class="product-desc">Handpicked, sweet, and sun-ripened. Experience the taste of summer in every bite!
+            </div>
+            <div class="price-toolbar">Rs 90<span class="old-price-toolbar">Rs 120</span> — <strong>25% Off Today
+                    Only!</strong></div>
+        </div>
+        <a href="https://blinkit.com/s/?q=mango" target="_blank" class="toolbar-button">Grab Mango Deal</a>
+
+        <span id="close-upsell" class="close-btn-upsell" onclick="closeUpsellPopup()">x</span>
+    </div>
+    <script>
+        function closePopup() {
+            document.getElementById('launchPopup').style.display = 'none';
+        }
+
+        function launchPopup() {
+            document.getElementById('launchPopup').style.display = 'flex';
+        }
+
+        function showPopup() {
+            document.getElementById('popupToolbar').style.display = 'flex';
+        }
+
+        function hidePopup() {
+            document.getElementById('popupToolbar').style.display = 'none';
+        }
+
+        function closeUpsellPopup() {
+            document.getElementById('upsellPopup').style.display = 'none';
+        }
+
+        function launchUpsellPopup() {
+            document.getElementById('upsellPopup').style.display = 'flex';
+        }
+        window.onload = function () {
+            document.getElementById('launchPopup').style.display = 'none';
+            setTimeout(function () {
+                document.getElementById('launchPopup').style.display = 'flex';
+            }, 5000);
+
+            document.getElementById('popupToolbar').style.display = 'none';
+            setTimeout(function () {
+                document.getElementById('popupToolbar').style.display = 'flex';
+            }, 10000);
+
+            document.getElementById('upsellPopup').style.display = 'none';
+            setTimeout(function () {
+                document.getElementById('upsellPopup').style.display = 'flex';
+            }, 7000);
+        };
+
+    </script>
+
+
+</body>
+
+</html>
